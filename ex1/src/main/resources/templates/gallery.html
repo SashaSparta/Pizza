@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="/ex1/css/style.css" rel="stylesheet" type="text/css"/>
+	<meta  charset= "utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Галерея</title>
+</head>
+<body>
+
+<header>
+	<div class="wrapper">
+	<nav>
+		<ul>
+			<li><a href="/ex1/">Головна </a></li> 
+			<li><a href="menu">Меню</a></li> 
+			<li><a href="gallery">Галерея</a></li> 
+			<li><a href="contacts">Контакти</a></li>
+
+		</ul>
+	</nav>
+
+	<nav class="enter">
+		<ul>
+			<li><a href="#">Вхід</a></li>
+			<li><a href="#">Корзина</a></li>
+		</ul>
+	</nav>
+	</div>
+</header>
+<main class="wrapper">
+
+<div th:each="photo: ${photos}">
+	 <figure >
+		<img src=images/4.png>
+		<figcaption th:text="${photo.pidpus}">картинка</figcaption>
+	</figure>
+</div>
+</main>
+
+             
+<footer>
+	<div class="wrapper">
+		<div class="rozklad">
+			<h1>Чекаємо на Вас</h1>
+			<p>Будні дні: 10:00 - 22:00</p>
+			<p>Субота-Неділя: 11:00 - 12:00</p>
+		</div>
+		<div class="gifak">
+			<img src="images/pizza.gif">
+		</div>
+		<div class="adress">
+			<h1>Наша адреса:</h1>
+			<p>м.Вінниця</p>
+			<p>вул. Келeцька, 98</p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
