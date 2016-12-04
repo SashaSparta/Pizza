@@ -28,14 +28,11 @@
 	</nav>
 	</div>
 </header>
-<main class="wrapper">
-
-<div th:each="photo: ${photos}">
-	 <figure >
-		<img src=images/4.png>
-		<figcaption th:text="${photo.pidpus}">картинка</figcaption>
+<main class="wrapper"  >
+	 <figure th:each="photo: ${photos}"  th:class="${photo.isFirstInRow}==true ? 'first_fig' : '' ">
+		<img src=images/4.png th:class="${photo.isFirstInRow}==true ? 'first_fig' : '' ">
+		<figcaption th:text="${photo.pidpus}+${photo.isFirstInRow}">картинка </figcaption>
 	</figure>
-</div>
 </main>
 
              
