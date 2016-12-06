@@ -30,8 +30,9 @@
 </header>
 <main class="wrapper"  >
 	 <figure th:each="photo: ${photos}"  th:class="${photo.isFirstInRow}==true ? 'first_fig' : '' ">
-		<img src=images/4.png th:class="${photo.isFirstInRow}==true ? 'first_fig' : '' ">
-		<figcaption th:text="${photo.pidpus}+${photo.isFirstInRow}">картинка </figcaption>
+		<!-- <img src=images/3.jpg > -->
+		<img th:src="${photo.kartinka}">
+		<figcaption th:text="${photo.pidpus}">картинка </figcaption>
 	</figure>
 </main>
 

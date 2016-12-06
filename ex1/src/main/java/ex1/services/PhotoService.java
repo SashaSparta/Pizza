@@ -12,14 +12,14 @@ import ex1.models.Photo;
 public class PhotoService 
 {
 	 private static final List<Photo> INITIAL_PHOTOS = Arrays.asList(
-	            new Photo("картінка1", "",true),
-	            new Photo("картінка2", "",false),
-	            new Photo("картінка3", "",false),
-	            new Photo("картінка4", "",false),
-	            new Photo("картінка5", "",true),
-	            new Photo("картінка6", "",false),
-	            new Photo("картінка7", "",false),
-	            new Photo("картінка8", "",false)
+	            new Photo("картінка1", "images/3.jpg",true),
+	            new Photo("картінка2", "images/10.jpg",false),
+	            new Photo("картінка3", "images/10.jpg",false),
+	            new Photo("картінка4", "images/3.jpg",false),
+	            new Photo("картінка5", "images/9.jpg",true),
+	            new Photo("картінка6", "images/9.jpg",false),
+	            new Photo("картінка7", "images/9.jpg",false),
+	            new Photo("картінка8", "images/9.jpg",false)
 	        ); 
 
 	        private List<Photo> photos = new ArrayList<Photo>(INITIAL_PHOTOS);
