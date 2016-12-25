@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="/ex1/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/ex1/css/style1.css" rel="stylesheet" type="text/css"/>
 	<meta  charset= "utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>Меню</title>
@@ -31,70 +31,20 @@
 <main class="wrapper">
 <section>
 	<h1>Меню</h1>
-	<article class="first_one">
-		<img src="images/pizza.jpg">
+	
+	<article th:each="menu: ${menus}"  th:class="${menu.isFirstInRow}==true ? 'first_one' : '' " >
+		<img th:src="${menu.kartinka}">
 		<div class="pizza_info">
-		<h2>ПІЦА «Американо» + СОУС «БАВАРСЬКИЙ»</h2>
-		<p>Фірмовий томатний соус, сир "Гауда", запечене куряче філе, бекон, маслини, перець пепероні</p>
-		<p class="weight">Вага: 840 г</p>
+		<h2 th:text="${menu.pidpus}">ПІЦА «Американо» + СОУС «БАВАРСЬКИЙ»</h2>
+		<p th:text="${menu.pid}">Фірмовий томатний соус, сир "Гауда", запечене куряче філе, бекон, маслини, перець пепероні</p>
+		<p class="weight" th:text="${menu.vaga}">Вага: 840 г</p>
 		</div>
 		<form>
-			<p>140грн.</p>
+			<p th:text="${menu.price}">140грн.</p>
 			<button type="submit">Замовити</button>
 		</form>
 	</article>
-	<article>
-		<img src="images/pizza2.jpg">
-		<h2>Піца «Баварська» + соус «Баварський»</h2>
-		<p>Фірмовий томатний соус, сир "Гауда", мисливські ковбаски, балик, печериці свіжі, помідори</p>
-		<p class="weight">Вага: 810 г</p>
-		<form>
-			<p>130грн.</p>
-			<button type="submit">Замовити</button>
-		</form>
-	</article>
-	<article>
-		<img src="images/pizza3.jpg">
-		<h2>Піца "4 сира  + СОУС "ЦЕЗАРЕ"</h2>
-		<p>Фірмовий томатний соус, сир "Моцарелла", сир "Дор Блю", сир "Пармезан", сир "Радомер"</p>
-		<p class="weight">Вага:740 г</p>
-		<form>
-			<p>110грн.</p>
-			<button type="submit">Замовити</button>
-		</form>
-	</article>
-	<article class="first_one">
-		<img src="images/pizza.jpg">
-		<div class="pizza_info">
-		<h2>ПІЦА «Американо» + СОУС «БАВАРСЬКИЙ»</h2>
-		<p>Фірмовий томатний соус, сир "Гауда", запечене куряче філе, бекон, маслини, перець пепероні</p>
-		<p class="weight">Вага: 840 г</p>
-		</div>
-		<form>
-			<p>140грн.</p>
-			<button type="submit">Замовити</button>
-		</form>
-	</article>
-	<article>
-		<img src="images/pizza2.jpg">
-		<h2>Піца «Баварська» + соус «Баварський»</h2>
-		<p>Фірмовий томатний соус, сир "Гауда", мисливські ковбаски, балик, печериці свіжі, помідори</p>
-		<p class="weight">Вага: 810 г</p>
-		<form>
-			<p>130грн.</p>
-			<button type="submit">Замовити</button>
-		</form>
-	</article>
-	<article>
-		<img src="images/pizza3.jpg">
-		<h2>Піца "4 сира  + СОУС "ЦЕЗАРЕ"</h2>
-		<p>Фірмовий томатний соус, сир "Моцарелла", сир "Дор Блю", сир "Пармезан", сир "Радомер"</p>
-		<p class="weight">Вага:740 г</p>
-		<form>
-			<p>110грн.</p>
-			<button type="submit">Замовити</button>
-		</form>
-	</article>
+	
 </section>
 
 	

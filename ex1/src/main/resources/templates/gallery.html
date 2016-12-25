@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="/ex1/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/ex1/css/style1.css" rel="stylesheet" type="text/css"/>
+	
+	 <script src="/ex1/JS/javas.js"></script>
+	 
 	<meta  charset= "utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	
+
+</head>
+	
 		<title>Галерея</title>
 </head>
-<body>
+<body onload="blinking_header()" onunload="stoptimer()">
 
 <header>
 	<div class="wrapper">
@@ -29,11 +37,14 @@
 	</div>
 </header>
 <main class="wrapper"  >
-	 <figure th:each="photo: ${photos}"  th:class="${photo.isFirstInRow}==true ? 'first_fig' : '' ">
-		<!-- <img src=images/3.jpg > -->
-		<img th:src="${photo.kartinka}">
-		<figcaption th:text="${photo.pidpus}">картинка </figcaption>
+	
+		<h1  id="blink" >Галерея, щоб її...</h1>
+
+	 <figure th:each="photo: ${photos}"  th:class="${photo.isFirstInRow}==true ? 'first_fig' : '' " >
+			<img th:src="${photo.kartinka}" onclick="changeSizeImage(this)"/>	
+			<figcaption th:text="${photo.pidpus}" >картинка </figcaption>
 	</figure>
+	
 </main>
 
              
